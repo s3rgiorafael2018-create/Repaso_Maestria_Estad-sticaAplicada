@@ -1,0 +1,1641 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Algebra Lineal esencial &#8212; Nivelatorio Maestría en Estadística Aplicada</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Algebra_Lineal';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Sección 3: laboratorio integrador" href="Laboratorio.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="notebooks.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/images.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/images.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="notebooks.html">
+                    Sección 1: Conceptos básicos de Python
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Laboratorio.html">Sección 3: laboratorio integrador</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Algebra Lineal esencial</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAlgebra_Lineal.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Algebra_Lineal.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Algebra Lineal esencial</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Algebra Lineal esencial</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores">Vectores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-punto">Producto punto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">Matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpuesta">Transpuesta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicacion-de-matrices">Multiplicación de matrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacion-a-x-tx">Aplicación a <span class="math notranslate nohighlight">\(X^TX\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-diseno-x">Matriz de diseño <span class="math notranslate nohighlight">\(X\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conexion-con-ols">Conexión con OLS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-definidas-positivas">Matrices definidas positivas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-simetricas">Matrices simétricas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-significa-que-una-matriz-sea-definida-positiva">¿Qué significa que una matriz sea definida positiva?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comprobar-diferentes-vectores">Comprobar diferentes vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores">Autovalores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem">Theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definida-positiva-y-existencia-de-la-inversa">Definida positiva y existencia de la inversa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-tx-es-simetrica">1. <span class="math notranslate nohighlight">\(X^TX\)</span> es simétrica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-tx-es-definida-positiva-cuando-x-tiene-rango-columna-completo">2. <span class="math notranslate nohighlight">\(X^TX\)</span> es definida positiva cuando <span class="math notranslate nohighlight">\(X\)</span> tiene rango columna completo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="algebra-lineal-esencial">
+<h1>Algebra Lineal esencial<a class="headerlink" href="#algebra-lineal-esencial" title="Permalink to this heading">#</a></h1>
+<p>El álgebra lineal proporciona las herramientas matemáticas necesarias para representar y manipular los datos de forma matricial. En estadística y ciencia de datos, conceptos como vectores, matrices, productos y transpuestas son fundamentales para expresar modelos estadísticos de manera compacta.</p>
+<p>En esta sección se revisarán los conceptos necesarios para comprender posteriormente la formulación matricial de la regresión lineal mediante Mínimos Cuadrados Ordinarios (OLS).</p>
+<p>En esta sección se usará el libro guia: Linear Algebra Done Right, Sheldon Axler. Se presentarán los diferentes conceptos en base a lo que se estará trabajando, pero se dejará el capitulo del libro donde buscar las definiciones generales y más teóricas para el lector.</p>
+<p>Link: <a class="reference external" href="https://linear.axler.net/LADR4e.pdf">https://linear.axler.net/LADR4e.pdf</a></p>
+<section id="vectores">
+<h2>Vectores<a class="headerlink" href="#vectores" title="Permalink to this heading">#</a></h2>
+<p>Un vector es una colección ordenada de elementos que puede representarse como una fila o una columna. En estadística, un vector puede representar, por ejemplo, las observaciones de una variable.</p>
+<p>Un vector columna de <span class="math notranslate nohighlight">\(n\)</span> elementos se representa como:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x} =
+\begin{bmatrix}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{bmatrix}
+\end{split}\]</div>
+<p>Por ejemplo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x} =
+\begin{bmatrix}
+2\\
+4\\
+6
+\end{bmatrix}
+\end{split}\]</div>
+<p>Este vector contiene tres elementos, por lo que su dimensión es <span class="math notranslate nohighlight">\(3\)</span>.</p>
+<p><strong>Leer más en el capitulo 1: Vector Spaces, pag 12.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vector:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensión:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Número de elementos:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vector: [2 4 6]
+Dimensión: (3,)
+Número de elementos: 3
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="producto-punto">
+<h2>Producto punto<a class="headerlink" href="#producto-punto" title="Permalink to this heading">#</a></h2>
+<p>El producto punto entre dos vectores de igual dimensión consiste en multiplicar sus elementos correspondientes y sumar los resultados.</p>
+<p>Dados:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x} =
+\begin{bmatrix}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{bmatrix}
+\qquad
+\mathbf{y} =
+\begin{bmatrix}
+y_1\\
+y_2\\
+\vdots\\
+y_n
+\end{bmatrix}
+\end{split}\]</div>
+<p>el producto punto se define como:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}^T\mathbf{y}
+=
+\sum_{i=1}^{n}x_i y_i
+\]</div>
+<p>Por ejemplo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x} =
+\begin{bmatrix}
+1\\
+2\\
+3
+\end{bmatrix},
+\qquad
+\mathbf{y} =
+\begin{bmatrix}
+4\\
+5\\
+6
+\end{bmatrix}
+\end{split}\]</div>
+<p>Entonces:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}^T\mathbf{y}
+=
+1(4)+2(5)+3(6)
+=4+10+18
+=32
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="n">producto_punto</span> <span class="o">=</span> <span class="n">x</span> <span class="o">@</span> <span class="n">y</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Producto punto:&quot;</span><span class="p">,</span> <span class="n">producto_punto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Producto punto: 32
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#también puedes usar esta funcion</span>
+<span class="n">producto_punto</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">producto_punto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
+</pre></div>
+</div>
+</div>
+</div>
+<p>El producto punto será fundamental posteriormente porque permite representar combinaciones lineales de variables mediante expresiones matriciales.</p>
+<p><strong>Leer más en el capítulo 6: Inner Products and Norms, pag 182.</strong></p>
+</section>
+<section id="matrices">
+<h2>Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h2>
+<p>Una matriz es una estructura rectangular organizada en filas y columnas.</p>
+<p>Una matriz <span class="math notranslate nohighlight">\(X\)</span> con <span class="math notranslate nohighlight">\(n\)</span> filas y <span class="math notranslate nohighlight">\(p\)</span> columnas se representa como:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X =
+\begin{bmatrix}
+x_{11} &amp; x_{12} &amp; \cdots &amp; x_{1p}\\
+x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2p}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
+\end{bmatrix}
+\end{split}\]</div>
+<p>Se dice que:</p>
+<div class="math notranslate nohighlight">
+\[
+X \in \mathbb{R}^{n\times p}
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(n\)</span> representa el número de filas y <span class="math notranslate nohighlight">\(p\)</span> el número de columnas.</p>
+<p>Por ejemplo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X =
+\begin{bmatrix}
+1&amp;2\\
+3&amp;4\\
+5&amp;6
+\end{bmatrix}
+\end{split}\]</div>
+<p>es una matriz de dimensión <span class="math notranslate nohighlight">\(3\times2\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensiones:&quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Filas:&quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Columnas:&quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2]
+ [3 4]
+ [5 6]]
+Dimensiones: (3, 2)
+Filas: 3
+Columnas: 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Las matrices permiten representar conjuntos de datos completos. Por ejemplo, cada fila puede representar una observación y cada columna una variable.</p>
+<p><strong>Leer más en el capítulo 3: Matrices, pag 69.</strong></p>
+</section>
+<section id="transpuesta">
+<h2>Transpuesta<a class="headerlink" href="#transpuesta" title="Permalink to this heading">#</a></h2>
+<p>La transpuesta de una matriz se obtiene intercambiando sus filas por sus columnas.</p>
+<p>Si:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X =
+\begin{bmatrix}
+1&amp;2\\
+3&amp;4\\
+5&amp;6
+\end{bmatrix}
+\end{split}\]</div>
+<p>entonces:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X^T =
+\begin{bmatrix}
+1&amp;3&amp;5\\
+2&amp;4&amp;6
+\end{bmatrix}
+\end{split}\]</div>
+<p>Una propiedad importante es:</p>
+<div class="math notranslate nohighlight">
+\[
+(X^T)^T=X
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">X_transpuesta</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz X:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transpuesta de X:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_transpuesta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz X:
+[[1 2]
+ [3 4]
+ [5 6]]
+
+Transpuesta de X:
+[[1 3 5]
+ [2 4 6]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>La transpuesta será especialmente importante en expresiones como:</p>
+<div class="math notranslate nohighlight">
+\[
+X^TX
+\]</div>
+<p>que aparecerán posteriormente en la solución matricial de OLS.</p>
+</section>
+<section id="multiplicacion-de-matrices">
+<h2>Multiplicación de matrices<a class="headerlink" href="#multiplicacion-de-matrices" title="Permalink to this heading">#</a></h2>
+<p>La multiplicación de matrices no consiste en multiplicar elemento por elemento. Cada elemento de la matriz resultante se obtiene mediante el producto punto entre una fila de la primera matriz y una columna de la segunda.</p>
+<p>Si:</p>
+<div class="math notranslate nohighlight">
+\[
+A\in\mathbb{R}^{m\times n}
+\]</div>
+<p>y</p>
+<div class="math notranslate nohighlight">
+\[
+B\in\mathbb{R}^{n\times p}
+\]</div>
+<p>entonces el producto:</p>
+<div class="math notranslate nohighlight">
+\[
+AB
+\]</div>
+<p>es posible y produce una matriz de dimensión:</p>
+<div class="math notranslate nohighlight">
+\[
+AB\in\mathbb{R}^{m\times p}
+\]</div>
+<p>Por ejemplo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+1&amp;2\\
+3&amp;4
+\end{bmatrix}
+\qquad
+B =
+\begin{bmatrix}
+5&amp;6\\
+7&amp;8
+\end{bmatrix}
+\end{split}\]</div>
+<p>Entonces:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+AB =
+\begin{bmatrix}
+1(5)+2(7)&amp;1(6)+2(8)\\
+3(5)+4(7)&amp;3(6)+4(8)
+\end{bmatrix}
+\end{split}\]</div>
+<p>por lo tanto:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+AB =
+\begin{bmatrix}
+19&amp;22\\
+43&amp;50
+\end{bmatrix}
+\end{split}\]</div>
+<p><strong>leer más en el capítulo 3D: Matrix Multiplication, pag 72.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">AB</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">B</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">B:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A × B:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">AB</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A:
+[[1 2]
+ [3 4]]
+
+B:
+[[5 6]
+ [7 8]]
+
+A × B:
+[[19 22]
+ [43 50]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>En Python, el operador <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> se utiliza para realizar multiplicación matricial.</p>
+<p><strong>Importante:</strong> <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code> y <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&#64;</span> <span class="pre">B</span></code> no representan la misma operación. <code class="docutils literal notranslate"><span class="pre">*</span></code> realiza multiplicación elemento a elemento, mientras que <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> realiza multiplicación matricial.</p>
+<p>Ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Multiplicación elemento a elemento:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">*</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Multiplicación matricial:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">@</span> <span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Multiplicación elemento a elemento:
+[[ 5 12]
+ [21 32]]
+
+Multiplicación matricial:
+[[19 22]
+ [43 50]]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="aplicacion-a-x-tx">
+<h3>Aplicación a <span class="math notranslate nohighlight">\(X^TX\)</span><a class="headerlink" href="#aplicacion-a-x-tx" title="Permalink to this heading">#</a></h3>
+<p>Si <span class="math notranslate nohighlight">\(X\)</span> tiene <span class="math notranslate nohighlight">\(n\)</span> observaciones y <span class="math notranslate nohighlight">\(p\)</span> variables:</p>
+<div class="math notranslate nohighlight">
+\[
+X\in\mathbb{R}^{n\times p}
+\]</div>
+<p>entonces su transpuesta tiene dimensión:</p>
+<div class="math notranslate nohighlight">
+\[
+X^T\in\mathbb{R}^{p\times n}
+\]</div>
+<p>y:</p>
+<div class="math notranslate nohighlight">
+\[
+X^TX\in\mathbb{R}^{p\times p}
+\]</div>
+<p>Esta matriz será fundamental para obtener la solución de OLS.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensión de X:&quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensión de X.T:&quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensión de X.T @ X:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">X.T @ X:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dimensión de X: (3, 2)
+Dimensión de X.T: (2, 3)
+Dimensión de X.T @ X: (2, 2)
+
+X.T @ X:
+[[ 3  9]
+ [ 9 29]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="matriz-de-diseno-x">
+<h2>Matriz de diseño <span class="math notranslate nohighlight">\(X\)</span><a class="headerlink" href="#matriz-de-diseno-x" title="Permalink to this heading">#</a></h2>
+<p>En regresión lineal, los datos pueden representarse mediante una matriz denominada <strong>matriz de diseño</strong>, generalmente representada por <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>Consideremos el modelo de regresión lineal simple:</p>
+<div class="math notranslate nohighlight">
+\[
+y_i=\beta_0+\beta_1x_i+\epsilon_i
+\]</div>
+<p>donde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(y_i\)</span>: variable respuesta.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span>: variable explicativa.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta_0\)</span>: intercepto.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta_1\)</span>: coeficiente de la variable explicativa.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\epsilon_i\)</span>: término de error.</p></li>
+</ul>
+<p>Este modelo puede escribirse de forma matricial como:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{y}=X\boldsymbol{\beta}+\boldsymbol{\epsilon}
+\]</div>
+<p>La matriz de diseño contiene una columna de unos para representar el intercepto:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X=
+\begin{bmatrix}
+1&amp;x_1\\
+1&amp;x_2\\
+\vdots&amp;\vdots\\
+1&amp;x_n
+\end{bmatrix}
+\end{split}\]</div>
+<p>y el vector de parámetros es:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\beta}=
+\begin{bmatrix}
+\beta_0\\
+\beta_1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Por ejemplo, si tenemos:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x=
+\begin{bmatrix}
+1\\
+2\\
+3
+\end{bmatrix}
+\end{split}\]</div>
+<p>la matriz de diseño será:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X=
+\begin{bmatrix}
+1&amp;1\\
+1&amp;2\\
+1&amp;3
+\end{bmatrix}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span>
+    <span class="n">x</span>
+<span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz de diseño X:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Dimensiones de X:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz de diseño X:
+[[1. 1.]
+ [1. 2.]
+ [1. 3.]]
+
+Dimensiones de X:
+(3, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<p>La primera columna corresponde al intercepto <span class="math notranslate nohighlight">\(\beta_0\)</span> y la segunda contiene los valores de la variable explicativa <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<section id="conexion-con-ols">
+<h3>Conexión con OLS<a class="headerlink" href="#conexion-con-ols" title="Permalink to this heading">#</a></h3>
+<p>La representación matricial permite escribir el modelo completo de regresión como:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{y}=X\boldsymbol{\beta}+\boldsymbol{\epsilon}
+\]</div>
+<p>El método de <strong>Mínimos Cuadrados Ordinarios (OLS)</strong> busca los valores de <span class="math notranslate nohighlight">\(\boldsymbol{\beta}\)</span> que minimizan la suma de los cuadrados de los residuos:</p>
+<div class="math notranslate nohighlight">
+\[
+\min_{\boldsymbol{\beta}}
+\|\mathbf{y}-X\boldsymbol{\beta}\|^2
+\]</div>
+<p>A partir de este problema se obtiene:</p>
+<div class="math notranslate nohighlight">
+\[
+X^TX\hat{\boldsymbol{\beta}}=X^T\mathbf{y}
+\]</div>
+<p>y, cuando <span class="math notranslate nohighlight">\(X^TX\)</span> es invertible:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+\hat{\boldsymbol{\beta}}
+=
+(X^TX)^{-1}X^T\mathbf{y}
+}
+\]</div>
+<p>Por esta razón, comprender vectores, transpuestas y multiplicación de matrices es necesario para interpretar la formulación matricial de OLS.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="matrices-definidas-positivas">
+<h1>Matrices definidas positivas<a class="headerlink" href="#matrices-definidas-positivas" title="Permalink to this heading">#</a></h1>
+<p>Las matrices definidas positivas son importantes en estadística porque aparecen de manera natural en expresiones como <span class="math notranslate nohighlight">\(X^TX\)</span>. Su principal utilidad en este contexto es garantizar ciertas propiedades matemáticas, entre ellas la <strong>invertibilidad</strong>, necesaria para obtener la solución matricial de OLS.</p>
+<section id="matrices-simetricas">
+<h2>Matrices simétricas<a class="headerlink" href="#matrices-simetricas" title="Permalink to this heading">#</a></h2>
+<p>Una matriz cuadrada <span class="math notranslate nohighlight">\(A\)</span> es <strong>simétrica</strong> cuando es igual a su transpuesta:</p>
+<div class="math notranslate nohighlight">
+\[
+A=A^T
+\]</div>
+<p>Por ejemplo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=
+\begin{bmatrix}
+2&amp;1\\
+1&amp;3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Su transpuesta es:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^T=
+\begin{bmatrix}
+2&amp;1\\
+1&amp;3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Por lo tanto:</p>
+<div class="math notranslate nohighlight">
+\[
+A=A^T
+\]</div>
+<p>Las matrices simétricas son importantes porque las matrices de la forma <span class="math notranslate nohighlight">\(X^TX\)</span> siempre son simétricas:</p>
+<div class="math notranslate nohighlight">
+\[
+(X^TX)^T=X^TX
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transpuesta de A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">¿A es simétrica?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz A:
+[[2 1]
+ [1 3]]
+
+Transpuesta de A:
+[[2 1]
+ [1 3]]
+
+¿A es simétrica?
+True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="que-significa-que-una-matriz-sea-definida-positiva">
+<h2>¿Qué significa que una matriz sea definida positiva?<a class="headerlink" href="#que-significa-que-una-matriz-sea-definida-positiva" title="Permalink to this heading">#</a></h2>
+<p>Una matriz cuadrada y simétrica <span class="math notranslate nohighlight">\(A\)</span> es <strong>definida positiva</strong> si para cualquier vector <span class="math notranslate nohighlight">\(\mathbf{x}\neq0\)</span> se cumple:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}^T A\mathbf{x}&gt;0
+\]</div>
+<p>Es decir, al realizar el producto:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}^T A\mathbf{x}
+\]</div>
+<p>el resultado siempre es positivo para cualquier vector diferente del vector cero.</p>
+<p>Consideremos:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=
+\begin{bmatrix}
+2&amp;0\\
+0&amp;3
+\end{bmatrix}
+\end{split}\]</div>
+<p>y:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}=
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
+\end{split}\]</div>
+<p>Entonces:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}^TA\mathbf{x}
+=
+\begin{bmatrix}
+1&amp;2
+\end{bmatrix}
+\begin{bmatrix}
+2&amp;0\\
+0&amp;3
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+2
+\end{bmatrix}
+\end{split}\]</div>
+<p>El resultado es:</p>
+<div class="math notranslate nohighlight">
+\[
+14&gt;0
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">A</span> <span class="o">@</span> <span class="n">x</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x^T A x =&quot;</span><span class="p">,</span> <span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x^T A x = 14
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este caso, el resultado es positivo.</p>
+<section id="comprobar-diferentes-vectores">
+<h3>Comprobar diferentes vectores<a class="headerlink" href="#comprobar-diferentes-vectores" title="Permalink to this heading">#</a></h3>
+<p>Podemos probar diferentes vectores para observar que el resultado continúa siendo positivo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vectores</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vectores</span><span class="p">:</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">A</span> <span class="o">@</span> <span class="n">x</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">,   x^T A x = </span><span class="si">{</span><span class="n">resultado</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = [1 0],   x^T A x = 2
+x = [0 1],   x^T A x = 3
+x = [1 2],   x^T A x = 14
+x = [-2  1],   x^T A x = 11
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para establecer que una matriz es definida positiva no basta con probar algunos vectores. Una forma práctica de verificarlo para una matriz simétrica es comprobar que <strong>todos sus autovalores sean positivos</strong>.</p>
+</section>
+<section id="autovalores">
+<h3>Autovalores<a class="headerlink" href="#autovalores" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">autovalores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvalsh</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Autovalores:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">autovalores</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">¿Es definida positiva?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">autovalores</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autovalores:
+[2. 3.]
+
+¿Es definida positiva?
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si todos los autovalores son mayores que cero, la matriz es definida positiva. A continuación se muestra las diferentes maneras de probar que una matriz es definida positiva o negativa.</p>
+</section>
+<section id="theorem">
+<h3>Theorem<a class="headerlink" href="#theorem" title="Permalink to this heading">#</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(A \in \mathbb{R}^{n \times n}\)</span> una matriz simétrica con valores propios <span class="math notranslate nohighlight">\(\lambda_1, \dots, \lambda_n\)</span> y menores principales <span class="math notranslate nohighlight">\(M_1, \dots, M_n\)</span>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span> es definida positiva si y solo si <span class="math notranslate nohighlight">\(\lambda_i &gt; 0\)</span> para todo <span class="math notranslate nohighlight">\(i = 1, \dots, n\)</span>, es decir, si todos sus valores propios son positivos.</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> es definida positiva si y solo si <span class="math notranslate nohighlight">\(M_i &gt; 0\)</span> para todo <span class="math notranslate nohighlight">\(i = 1, \dots, n\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> es definida negativa si y solo si <span class="math notranslate nohighlight">\(\lambda_i &lt; 0\)</span> para todo <span class="math notranslate nohighlight">\(i = 1, \dots, n\)</span>, es decir, si todos sus valores propios son negativos.</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> es definida negativa si y solo si <span class="math notranslate nohighlight">\(M_i &lt; 0\)</span> para todo <span class="math notranslate nohighlight">\(i\)</span> impar y <span class="math notranslate nohighlight">\(M_i &gt; 0\)</span> para todo <span class="math notranslate nohighlight">\(i\)</span> par.</p></li>
+</ul>
+</section>
+</section>
+<section id="definida-positiva-y-existencia-de-la-inversa">
+<h2>Definida positiva y existencia de la inversa<a class="headerlink" href="#definida-positiva-y-existencia-de-la-inversa" title="Permalink to this heading">#</a></h2>
+<p>Una propiedad importante de las matrices definidas positivas es que <strong>son invertibles</strong>.</p>
+<p>Si <span class="math notranslate nohighlight">\(A\)</span> es definida positiva, entonces todos sus autovalores son mayores que cero:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_i&gt;0
+\]</div>
+<p>Por lo tanto, ninguno de sus autovalores es igual a cero y:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A)\neq0
+\]</div>
+<p>Esto garantiza que existe la matriz inversa:</p>
+<div class="math notranslate nohighlight">
+\[
+A^{-1}
+\]</div>
+<p>Por ejemplo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=
+\begin{bmatrix}
+2&amp;0\\
+0&amp;3
+\end{bmatrix}
+\end{split}\]</div>
+<p>tiene inversa:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1}=
+\begin{bmatrix}
+1/2&amp;0\\
+0&amp;1/3
+\end{bmatrix}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">A_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Inversa de A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A_inv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz A:
+[[2 0]
+ [0 3]]
+
+Inversa de A:
+[[0.5        0.        ]
+ [0.         0.33333333]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos comprobar que:</p>
+<div class="math notranslate nohighlight">
+\[
+AA^{-1}=I
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(I\)</span> es la matriz identidad.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">identidad</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">A_inv</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">identidad</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1. 0.]
+ [0. 1.]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>No toda matriz cuadrada es invertible.</p>
+<p>Por ejemplo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B=
+\begin{bmatrix}
+1&amp;2\\
+2&amp;4
+\end{bmatrix}
+\end{split}\]</div>
+<p>tiene filas y columnas linealmente dependientes. Su determinante es cero:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(B)=0
+\]</div>
+<p>por lo que <span class="math notranslate nohighlight">\(B^{-1}\)</span> no existe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Determinante:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Determinante: 0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Intentar calcular su inversa genera un problema porque la matriz es singular (borrar el “#” y correr el codigo para ver el error):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#np.linalg.inv(B)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>¿Por qué importa para OLS?</p>
+<p>En regresión lineal, el modelo puede escribirse como:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{y}=X\boldsymbol{\beta}+\boldsymbol{\epsilon}
+\]</div>
+<p>El estimador de Mínimos Cuadrados Ordinarios es:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{\boldsymbol{\beta}}
+=
+(X^TX)^{-1}X^T\mathbf{y}
+\]</div>
+<p>Observemos que aparece la matriz:</p>
+<div class="math notranslate nohighlight">
+\[
+X^TX
+\]</div>
+<p>Esta matriz tiene dos propiedades importantes:</p>
+<section id="x-tx-es-simetrica">
+<h3>1. <span class="math notranslate nohighlight">\(X^TX\)</span> es simétrica<a class="headerlink" href="#x-tx-es-simetrica" title="Permalink to this heading">#</a></h3>
+<p>Por definición:</p>
+<div class="math notranslate nohighlight">
+\[
+(X^TX)^T=X^TX
+\]</div>
+</section>
+<section id="x-tx-es-definida-positiva-cuando-x-tiene-rango-columna-completo">
+<h3>2. <span class="math notranslate nohighlight">\(X^TX\)</span> es definida positiva cuando <span class="math notranslate nohighlight">\(X\)</span> tiene rango columna completo<a class="headerlink" href="#x-tx-es-definida-positiva-cuando-x-tiene-rango-columna-completo" title="Permalink to this heading">#</a></h3>
+<p>Para cualquier vector <span class="math notranslate nohighlight">\(\mathbf{z}\neq0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{z}^TX^TX\mathbf{z}
+=
+(X\mathbf{z})^T(X\mathbf{z})
+=
+\|X\mathbf{z}\|^2
+\]</div>
+<p>Como una norma al cuadrado es positiva cuando <span class="math notranslate nohighlight">\(X\mathbf{z}\neq0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{z}^TX^TX\mathbf{z}&gt;0
+\]</div>
+<p>cuando las columnas de <span class="math notranslate nohighlight">\(X\)</span> son linealmente independientes.</p>
+<p>Por lo tanto:</p>
+<div class="math notranslate nohighlight">
+\[
+X^TX
+\text{ es definida positiva}
+\]</div>
+<p>y, en consecuencia:</p>
+<div class="math notranslate nohighlight">
+\[
+(X^TX)^{-1}
+\text{ existe}
+\]</div>
+<p>Esto permite calcular:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+\hat{\boldsymbol{\beta}}
+=
+(X^TX)^{-1}X^T\mathbf{y}
+}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Ejemplo, condiferemos la matriz de diseño:</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">X^T X:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X:
+[[1 1]
+ [1 2]
+ [1 3]]
+
+X^T X:
+[[ 3  6]
+ [ 6 14]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos comprobar que <span class="math notranslate nohighlight">\(X^TX\)</span> es simétrica:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XtX</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¿X^T X es simétrica?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">XtX</span><span class="p">,</span> <span class="n">XtX</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>¿X^T X es simétrica?
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>También podemos comprobar sus autovalores:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">autovalores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvalsh</span><span class="p">(</span><span class="n">XtX</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Autovalores de X^T X:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">autovalores</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">¿X^T X es definida positiva?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">autovalores</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autovalores de X^T X:
+[ 0.3605897 16.6394103]
+
+¿X^T X es definida positiva?
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como los autovalores son positivos, <span class="math notranslate nohighlight">\(X^TX\)</span> es definida positiva y, por lo tanto, es invertible.</p>
+<p>Finalmente podemos calcular la solución de OLS:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">X</span><span class="p">)</span> <span class="o">@</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">y</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estimadores de OLS:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimadores de OLS:
+[0.33333333 1.5       ]
+</pre></div>
+</div>
+</div>
+</div>
+<p>La relación entre los conceptos estudiados puede resumirse de la siguiente manera:</p>
+<div class="math notranslate nohighlight">
+\[
+X
+\longrightarrow
+X^TX
+\longrightarrow
+\text{matriz simétrica}
+\]</div>
+<p>Si las columnas de <span class="math notranslate nohighlight">\(X\)</span> son linealmente independientes:</p>
+<div class="math notranslate nohighlight">
+\[
+X^TX
+\longrightarrow
+\text{definida positiva}
+\]</div>
+<p>y entonces:</p>
+<div class="math notranslate nohighlight">
+\[
+X^TX
+\longrightarrow
+(X^TX)^{-1}\text{ existe}
+\]</div>
+<p>lo que permite obtener:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+\hat{\boldsymbol{\beta}}
+=
+(X^TX)^{-1}X^T\mathbf{y}
+}
+\]</div>
+<p><strong>Idea clave:</strong> La definida positividad no se introduce solamente como una propiedad matemática. En OLS, está relacionada con la posibilidad de <strong>invertir <span class="math notranslate nohighlight">\(X^TX\)</span></strong> y, por tanto, obtener una solución única para los coeficientes del modelo.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Laboratorio.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sección 3: laboratorio integrador</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Algebra Lineal esencial</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores">Vectores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-punto">Producto punto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">Matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpuesta">Transpuesta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicacion-de-matrices">Multiplicación de matrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacion-a-x-tx">Aplicación a <span class="math notranslate nohighlight">\(X^TX\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-diseno-x">Matriz de diseño <span class="math notranslate nohighlight">\(X\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conexion-con-ols">Conexión con OLS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-definidas-positivas">Matrices definidas positivas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-simetricas">Matrices simétricas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-significa-que-una-matriz-sea-definida-positiva">¿Qué significa que una matriz sea definida positiva?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comprobar-diferentes-vectores">Comprobar diferentes vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores">Autovalores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem">Theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definida-positiva-y-existencia-de-la-inversa">Definida positiva y existencia de la inversa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-tx-es-simetrica">1. <span class="math notranslate nohighlight">\(X^TX\)</span> es simétrica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-tx-es-definida-positiva-cuando-x-tiene-rango-columna-completo">2. <span class="math notranslate nohighlight">\(X^TX\)</span> es definida positiva cuando <span class="math notranslate nohighlight">\(X\)</span> tiene rango columna completo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sergio Rada
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

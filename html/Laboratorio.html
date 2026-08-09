@@ -1,0 +1,1836 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Sección 3: laboratorio integrador &#8212; Nivelatorio Maestría en Estadística Aplicada</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Laboratorio';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Algebra Lineal esencial" href="Algebra_Lineal.html" />
+    <link rel="prev" title="Sección 1: Conceptos básicos de Python" href="notebooks.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="notebooks.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/images.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/images.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="notebooks.html">
+                    Sección 1: Conceptos básicos de Python
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sección 3: laboratorio integrador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Algebra_Lineal.html">Algebra Lineal esencial</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLaboratorio.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Laboratorio.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sección 3: laboratorio integrador</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carga-de-datos">Carga de Datos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-faltantes">Valores Faltantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminacion-de-observaciones">1. Eliminación de observaciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminacion-de-variables">2. Eliminación de variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imputacion-de-valores">3. Imputación de valores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mantener-los-valores-faltantes">4. Mantener los valores faltantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-faltan-los-datos">¿Por qué faltan los datos?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-para-este-ejercicio">Decisión para este ejercicio</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-descriptivo-univariado">Análisis Descriptivo Univariado</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-tendencia-central-y-dispersion-variables-numericas">Medidas de tendencia central y dispersión (variables numéricas)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frecuencias-de-variables-categoricas-variables-categoricas">Frecuencias de variables categóricas (variables categóricas)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-descriptivo-bivariado">Análisis Descriptivo Bivariado</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#categorica-vs-categorica">Categórica vs Categórica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#categorica-vs-numerica">Categórica vs numérica</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="seccion-3-laboratorio-integrador">
+<h1>Sección 3: laboratorio integrador<a class="headerlink" href="#seccion-3-laboratorio-integrador" title="Permalink to this heading">#</a></h1>
+<p>En esta sesión se integrarán todos los conceptos aprendidos mediante el análisis de un conjunto de datos real. Los estudiantes realizarán la carga, exploración, limpieza básica, análisis descriptivo y visualización de los datos, culminando con la elaboración de un breve reporte de resultados.</p>
+<section id="carga-de-datos">
+<h2>Carga de Datos<a class="headerlink" href="#carga-de-datos" title="Permalink to this heading">#</a></h2>
+<p>Los datos se encuentran en Kaggle que es una de las paginas web donde se pueden extraer dataset de todo tipo. La base de datos que trabajaremos contiene la lista de películas y shows de tv en Netflix. Podemos decargar los datos desde el siguiente link:</p>
+<p><a class="reference external" href="https://www.kaggle.com/datasets/shivamb/netflix-shows">https://www.kaggle.com/datasets/shivamb/netflix-shows</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">datos</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;netflix_titles.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>show_id</th>
+      <th>type</th>
+      <th>title</th>
+      <th>director</th>
+      <th>cast</th>
+      <th>country</th>
+      <th>date_added</th>
+      <th>release_year</th>
+      <th>rating</th>
+      <th>duration</th>
+      <th>listed_in</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>s1</td>
+      <td>Movie</td>
+      <td>Dick Johnson Is Dead</td>
+      <td>Kirsten Johnson</td>
+      <td>NaN</td>
+      <td>United States</td>
+      <td>September 25, 2021</td>
+      <td>2020</td>
+      <td>PG-13</td>
+      <td>90 min</td>
+      <td>Documentaries</td>
+      <td>As her father nears the end of his life, filmm...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>s2</td>
+      <td>TV Show</td>
+      <td>Blood &amp; Water</td>
+      <td>NaN</td>
+      <td>Ama Qamata, Khosi Ngema, Gail Mabalane, Thaban...</td>
+      <td>South Africa</td>
+      <td>September 24, 2021</td>
+      <td>2021</td>
+      <td>TV-MA</td>
+      <td>2 Seasons</td>
+      <td>International TV Shows, TV Dramas, TV Mysteries</td>
+      <td>After crossing paths at a party, a Cape Town t...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>s3</td>
+      <td>TV Show</td>
+      <td>Ganglands</td>
+      <td>Julien Leclercq</td>
+      <td>Sami Bouajila, Tracy Gotoas, Samuel Jouy, Nabi...</td>
+      <td>NaN</td>
+      <td>September 24, 2021</td>
+      <td>2021</td>
+      <td>TV-MA</td>
+      <td>1 Season</td>
+      <td>Crime TV Shows, International TV Shows, TV Act...</td>
+      <td>To protect his family from a powerful drug lor...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>s4</td>
+      <td>TV Show</td>
+      <td>Jailbirds New Orleans</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>September 24, 2021</td>
+      <td>2021</td>
+      <td>TV-MA</td>
+      <td>1 Season</td>
+      <td>Docuseries, Reality TV</td>
+      <td>Feuds, flirtations and toilet talk go down amo...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>s5</td>
+      <td>TV Show</td>
+      <td>Kota Factory</td>
+      <td>NaN</td>
+      <td>Mayur More, Jitendra Kumar, Ranjan Raj, Alam K...</td>
+      <td>India</td>
+      <td>September 24, 2021</td>
+      <td>2021</td>
+      <td>TV-MA</td>
+      <td>2 Seasons</td>
+      <td>International TV Shows, Romantic TV Shows, TV ...</td>
+      <td>In a city of coaching centers known to train I...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(8807, 12)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Seleccionar solo las columnas categóricas</span>
+<span class="n">columnas_categoricas</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">columns</span>
+
+<span class="c1"># 2. Crear una lista con la información de cada columna</span>
+<span class="n">resumen</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columnas_categoricas</span><span class="p">:</span>
+    <span class="n">unicos</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>  <span class="c1"># .dropna() opcional por si hay nulos</span>
+    <span class="n">resumen</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s2">&quot;Variable&quot;</span><span class="p">:</span> <span class="n">col</span><span class="p">,</span>
+        <span class="s2">&quot;Cantidad_Categorias&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">unicos</span><span class="p">),</span>
+    <span class="p">})</span>
+<span class="c1"># 3. Convertir la lista en una tabla (DataFrame)</span>
+<span class="n">tabla_categorias</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">resumen</span><span class="p">)</span>
+
+<span class="c1"># Mostrar la tabla</span>
+<span class="n">tabla_categorias</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variable</th>
+      <th>Cantidad_Categorias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>show_id</td>
+      <td>8807</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>type</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>title</td>
+      <td>8807</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>director</td>
+      <td>4528</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>cast</td>
+      <td>7692</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>country</td>
+      <td>748</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>date_added</td>
+      <td>1767</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>rating</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>duration</td>
+      <td>220</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>listed_in</td>
+      <td>514</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>description</td>
+      <td>8775</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Con esta tabla se pueden ver las categorías unicas que hay en cada variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 8807 entries, 0 to 8806
+Data columns (total 12 columns):
+ #   Column        Non-Null Count  Dtype 
+---  ------        --------------  ----- 
+ 0   show_id       8807 non-null   object
+ 1   type          8807 non-null   object
+ 2   title         8807 non-null   object
+ 3   director      6173 non-null   object
+ 4   cast          7982 non-null   object
+ 5   country       7976 non-null   object
+ 6   date_added    8797 non-null   object
+ 7   release_year  8807 non-null   int64 
+ 8   rating        8803 non-null   object
+ 9   duration      8804 non-null   object
+ 10  listed_in     8807 non-null   object
+ 11  description   8807 non-null   object
+dtypes: int64(1), object(11)
+memory usage: 825.8+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se tienen 11 variables categóricas y 1 variable numérica.</p>
+</section>
+<section id="valores-faltantes">
+<h2>Valores Faltantes<a class="headerlink" href="#valores-faltantes" title="Permalink to this heading">#</a></h2>
+<p>Los valores faltantes (<code class="docutils literal notranslate"><span class="pre">NA</span></code>) son observaciones para las cuales no se dispone de información.
+Antes de eliminarlos o reemplazarlos, es necesario evaluar su cantidad, distribución y posible impacto sobre el análisis.</p>
+<p>La presencia de valores faltantes no implica necesariamente que los datos deban eliminarse.
+La estrategia de tratamiento debe depender de aspectos como:</p>
+<ul class="simple">
+<li><p>El porcentaje de valores faltantes.</p></li>
+<li><p>La importancia de la variable para el análisis.</p></li>
+<li><p>El tipo de variable (numérica, categórica o fecha).</p></li>
+<li><p>La posible razón por la que el dato está ausente.</p></li>
+<li><p>El tamaño de la muestra.</p></li>
+<li><p>El objetivo del análisis.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resumen_faltantes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Número de Faltantes&#39;</span><span class="p">:</span> <span class="n">datos</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="s1">&#39;Porcentaje (%)&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="c1"># Muestra la tabla</span>
+<span class="n">resumen_faltantes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Número de Faltantes</th>
+      <th>Porcentaje (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>show_id</th>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>type</th>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>title</th>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>director</th>
+      <td>2634</td>
+      <td>29.91</td>
+    </tr>
+    <tr>
+      <th>cast</th>
+      <td>825</td>
+      <td>9.37</td>
+    </tr>
+    <tr>
+      <th>country</th>
+      <td>831</td>
+      <td>9.44</td>
+    </tr>
+    <tr>
+      <th>date_added</th>
+      <td>10</td>
+      <td>0.11</td>
+    </tr>
+    <tr>
+      <th>release_year</th>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>rating</th>
+      <td>4</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>duration</th>
+      <td>3</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <th>listed_in</th>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>description</th>
+      <td>0</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Existen diferentes alternativas para tratar los valores faltantes:</p>
+<section id="eliminacion-de-observaciones">
+<h3>1. Eliminación de observaciones<a class="headerlink" href="#eliminacion-de-observaciones" title="Permalink to this heading">#</a></h3>
+<p>Consiste en eliminar las filas que contienen valores faltantes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_limpio</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Esta estrategia es sencilla, pero puede provocar una pérdida considerable de información.
+Además, si los valores faltantes no están distribuidos aleatoriamente, eliminar las observaciones puede introducir <strong>sesgo</strong> en los resultados.</p>
+<p>Por ejemplo, si se eliminan todas las películas que no tienen información sobre el país,
+el análisis podría dejar de representar adecuadamente el catálogo original.</p>
+</section>
+<section id="eliminacion-de-variables">
+<h3>2. Eliminación de variables<a class="headerlink" href="#eliminacion-de-variables" title="Permalink to this heading">#</a></h3>
+<p>Cuando una variable presenta una proporción muy elevada de valores faltantes, puede considerarse eliminarla.</p>
+<p>Como regla práctica para este ejercicio, utilizaremos un umbral del 50%, es decir, si más del 50% de los registros de una variable son faltantes, la variable será considerada candidata a eliminación. Este valor no constituye una regla estadística universal. El umbral debe definirse de acuerdo con el contexto, el objetivo del análisis y la importancia de la variable.</p>
+<p>Por ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">umbral</span> <span class="o">=</span> <span class="mf">0.50</span>
+
+<span class="n">columnas_a_eliminar</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">umbral</span>
+<span class="p">]</span>
+
+<span class="n">df_limpio</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columnas_a_eliminar</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Consecuencias de eliminar una variable:</strong></p>
+<ul class="simple">
+<li><p>Se pierde toda la información disponible en esa variable.</p></li>
+<li><p>Puede impedir determinados análisis posteriores.</p></li>
+<li><p>Se simplifica el conjunto de datos.</p></li>
+<li><p>Se evita realizar imputaciones sobre una variable con muy poca información.</p></li>
+<li><p>Si la variable era importante, su eliminación puede afectar la interpretación del estudio.</p></li>
+</ul>
+<p>Por esta razón, un porcentaje alto de valores faltantes <strong>no es suficiente por sí solo para eliminar una variable</strong>.</p>
+</section>
+<section id="imputacion-de-valores">
+<h3>3. Imputación de valores<a class="headerlink" href="#imputacion-de-valores" title="Permalink to this heading">#</a></h3>
+<p>Otra alternativa consiste en reemplazar los valores faltantes por valores estimados a partir de la información disponible.</p>
+<p>Para variables numéricas pueden utilizarse medidas como:</p>
+<ul class="simple">
+<li><p>Media.</p></li>
+<li><p>Mediana.</p></li>
+<li><p>Métodos de imputación más avanzados.</p></li>
+</ul>
+<p>Por ejemplo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;variable&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;variable&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;variable&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>La <strong>mediana</strong> suele ser preferible a la media cuando existen valores extremos o cuando la distribución es asimétrica.</p>
+<p>Para variables categóricas puede utilizarse la categoría más frecuente:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;variable&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;variable&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;variable&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Sin embargo, la imputación también tiene consecuencias. Al reemplazar los valores faltantes por un único valor se puede reducir artificialmente la variabilidad de los datos y alterar algunas relaciones entre variables.</p>
+</section>
+<section id="mantener-los-valores-faltantes">
+<h3>4. Mantener los valores faltantes<a class="headerlink" href="#mantener-los-valores-faltantes" title="Permalink to this heading">#</a></h3>
+<p>En algunos casos, la mejor decisión es <strong>no modificar los <code class="docutils literal notranslate"><span class="pre">NA</span></code></strong>.</p>
+<p>Esto puede ocurrir cuando:</p>
+<ul class="simple">
+<li><p>La variable no es necesaria para el análisis.</p></li>
+<li><p>El análisis utilizado permite trabajar con valores faltantes.</p></li>
+<li><p>El número de faltantes es pequeño.</p></li>
+<li><p>El valor faltante tiene un significado propio.</p></li>
+</ul>
+<p>Por ejemplo, en el dataset de Netflix, que una película no tenga información en una determinada variable no necesariamente significa que el registro sea incorrecto.</p>
+</section>
+<section id="por-que-faltan-los-datos">
+<h3>¿Por qué faltan los datos?<a class="headerlink" href="#por-que-faltan-los-datos" title="Permalink to this heading">#</a></h3>
+<p>Además de conocer cuántos valores faltan, es importante preguntarse <strong>por qué faltan</strong>.</p>
+<p>En estadística suelen distinguirse tres mecanismos:</p>
+<ul class="simple">
+<li><p><strong>MCAR (Missing Completely At Random):</strong> la ausencia del dato es completamente aleatoria.</p></li>
+<li><p><strong>MAR (Missing At Random):</strong> la ausencia puede explicarse mediante otras variables observadas.</p></li>
+<li><p><strong>MNAR (Missing Not At Random):</strong> la probabilidad de que un dato falte depende del propio valor faltante o de información no observada.</p></li>
+</ul>
+<p>Esta distinción es importante porque el mecanismo de ausencia puede afectar la validez de las estrategias de eliminación e imputación.</p>
+</section>
+<section id="decision-para-este-ejercicio">
+<h3>Decisión para este ejercicio<a class="headerlink" href="#decision-para-este-ejercicio" title="Permalink to this heading">#</a></h3>
+<p>Para este análisis se utilizará un enfoque sencillo y reproducible:</p>
+<ol class="arabic simple">
+<li><p>Identificar las variables con valores faltantes.</p></li>
+<li><p>Calcular su cantidad y porcentaje.</p></li>
+<li><p>Considerar como candidatas a eliminación las variables con más del <strong>50% de valores faltantes</strong>.</p></li>
+<li><p>Para las variables importantes que tengan una proporción menor, evaluar una estrategia de imputación apropiada.</p></li>
+<li><p>Comparar, cuando sea necesario, el conjunto de datos antes y después de la limpieza.</p></li>
+</ol>
+<p><strong>Importante:</strong> el umbral del 50% es una regla práctica utilizada en este ejercicio y no una regla estadística universal. En un análisis aplicado, la decisión debe justificarse según el contexto y las características de los datos.</p>
+<p>Ya vistas las diferentes formas de tratar datos faltantes, al final el investigador es quien decide que técnica aplicar, que umbrales usar y demás. Por ejemplo, en nuestro dataset las variables con mayor datos faltantes son director, cast, country y date_added, las cuales son variables categóricas nominales y con poco porcentaje de datos faltantes, a excepcion de “director”. En este caso, lo que se hará es rellenar esos datos que faltan con la categoría “Desconocido”. Por otro lado, las variables que tienen valores na menores al 1% simplemente se omitirá esa observación</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;director&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;director&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;Desconocido&quot;</span><span class="p">)</span>
+<span class="n">datos</span><span class="p">[</span><span class="s2">&quot;cast&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;cast&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;Desconocido&quot;</span><span class="p">)</span>
+<span class="n">datos</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;Desconocido&quot;</span><span class="p">)</span>
+<span class="n">datos</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;date_added&quot;</span><span class="p">,</span> <span class="s2">&quot;rating&quot;</span><span class="p">,</span> <span class="s2">&quot;duration&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resumen_faltantes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Número de Faltantes&#39;</span><span class="p">:</span> <span class="n">datos</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="s1">&#39;Porcentaje (%)&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">datos</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="c1"># Muestra la tabla</span>
+<span class="n">resumen_faltantes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Número de Faltantes</th>
+      <th>Porcentaje (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>show_id</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>type</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>title</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>director</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>cast</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>country</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>date_added</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>release_year</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>rating</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>duration</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>listed_in</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>description</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(8790, 12)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora tenemos el dataset limpio con 8790 obervaciones, 17 observaciones menos que la base de datos original.</p>
+</section>
+</section>
+<section id="analisis-descriptivo-univariado">
+<h2>Análisis Descriptivo Univariado<a class="headerlink" href="#analisis-descriptivo-univariado" title="Permalink to this heading">#</a></h2>
+<section id="medidas-de-tendencia-central-y-dispersion-variables-numericas">
+<h3>Medidas de tendencia central y dispersión (variables numéricas)<a class="headerlink" href="#medidas-de-tendencia-central-y-dispersion-variables-numericas" title="Permalink to this heading">#</a></h3>
+<p>Para este conjunto de datos, se analizará la variable release_year, correspondiente al año de lanzamiento del contenido.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Medidas descriptivas de release_year</span>
+<span class="n">resumen_release</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Media&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()],</span>
+    <span class="s2">&quot;Mediana&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()],</span>
+    <span class="s2">&quot;Desviación estándar&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()],</span>
+    <span class="s2">&quot;Varianza&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">()],</span>
+    <span class="s2">&quot;Mínimo&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()],</span>
+    <span class="s2">&quot;Máximo&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span>
+    <span class="s2">&quot;Q1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)],</span>
+    <span class="s2">&quot;Q3&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)],</span>
+    <span class="s2">&quot;rango intercuartil&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span><span class="o">-</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)]</span>
+<span class="p">})</span>
+
+<span class="n">resumen_release</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Media</th>
+      <th>Mediana</th>
+      <th>Desviación estándar</th>
+      <th>Varianza</th>
+      <th>Mínimo</th>
+      <th>Máximo</th>
+      <th>Q1</th>
+      <th>Q3</th>
+      <th>rango intercuartil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2014.183163</td>
+      <td>2017.0</td>
+      <td>8.825466</td>
+      <td>77.888851</td>
+      <td>1925</td>
+      <td>2021</td>
+      <td>2013.0</td>
+      <td>2019.0</td>
+      <td>6.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">datos</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;release_year&quot;</span><span class="p">,</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">kde</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución del año de lanzamiento&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Año de lanzamiento&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frecuencia&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\User\.conda\envs\dataviz_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context(&#39;mode.use_inf_as_na&#39;, True):
+</pre></div>
+</div>
+<img alt="_images/0894a6ebe854dd967b120e669bb6b0bbb18d58466473b8a532796fb202871c34.png" src="_images/0894a6ebe854dd967b120e669bb6b0bbb18d58466473b8a532796fb202871c34.png" />
+</div>
+</div>
+<p>La variable release_year presenta una media de 2014.18 años y una mediana de 2017, lo que indica que los contenidos se concentran principalmente en años recientes. Los años van desde 1925 hasta 2021, mostrando una amplitud temporal considerable. Sin embargo, el 50 % central de los contenidos se encuentra entre 2013 y 2019, con un rango intercuartílico de 6 años, lo que indica una concentración relativamente alta de los datos en este periodo. La desviación estándar de aproximadamente 8.83 años muestra una dispersión moderada alrededor de la media.</p>
+</section>
+<section id="frecuencias-de-variables-categoricas-variables-categoricas">
+<h3>Frecuencias de variables categóricas (variables categóricas)<a class="headerlink" href="#frecuencias-de-variables-categoricas-variables-categoricas" title="Permalink to this heading">#</a></h3>
+<p>Para este caso solo se analizarán type y rating para el ejemplo, pero cabe resaltar que algunas variables no es necesaria analizarlas en bruto, como es el caso de cast, description o listed_in porque tienen muchas categorías distintas o unicas.</p>
+<ul class="simple">
+<li><p><strong>Type</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabla_type</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Frecuencia&quot;</span><span class="p">:</span> <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(),</span>
+    <span class="s2">&quot;Porcentaje (%)&quot;</span><span class="p">:</span> <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="n">tabla_type</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Frecuencia</th>
+      <th>Porcentaje (%)</th>
+    </tr>
+    <tr>
+      <th>type</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Movie</th>
+      <td>6126</td>
+      <td>69.69</td>
+    </tr>
+    <tr>
+      <th>TV Show</th>
+      <td>2664</td>
+      <td>30.31</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">datos</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;type&quot;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución del contenido según tipo&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tipo de contenido&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frecuencia&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5c4e44826d79765842458122a1ed219e1c51c43ac222b3efd6ca7be6e9273ab9.png" src="_images/5c4e44826d79765842458122a1ed219e1c51c43ac222b3efd6ca7be6e9273ab9.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Otra forma para visualizar el gráfico</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">datos</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;type&quot;</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">patches</span><span class="p">:</span>
+    <span class="n">conteo</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">())</span>
+    <span class="n">porcentaje</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">conteo</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">total</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">conteo</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">porcentaje</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> 
+                <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">()),</span> 
+                <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> 
+                <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset points&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución del contenido según tipo&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tipo de contenido&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frecuencia&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/7179aa08c5bd2d672537edcc0ed6cbf3bd57ab7385514b743ffad85cd7b2333b.png" src="_images/7179aa08c5bd2d672537edcc0ed6cbf3bd57ab7385514b743ffad85cd7b2333b.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Rating</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabla_rating</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Frecuencia&quot;</span><span class="p">:</span> <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(),</span>
+    <span class="s2">&quot;Porcentaje (%)&quot;</span><span class="p">:</span> <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="n">tabla_rating</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Frecuencia</th>
+      <th>Porcentaje (%)</th>
+    </tr>
+    <tr>
+      <th>rating</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>TV-MA</th>
+      <td>3205</td>
+      <td>36.46</td>
+    </tr>
+    <tr>
+      <th>TV-14</th>
+      <td>2157</td>
+      <td>24.54</td>
+    </tr>
+    <tr>
+      <th>TV-PG</th>
+      <td>861</td>
+      <td>9.80</td>
+    </tr>
+    <tr>
+      <th>R</th>
+      <td>799</td>
+      <td>9.09</td>
+    </tr>
+    <tr>
+      <th>PG-13</th>
+      <td>490</td>
+      <td>5.57</td>
+    </tr>
+    <tr>
+      <th>TV-Y7</th>
+      <td>333</td>
+      <td>3.79</td>
+    </tr>
+    <tr>
+      <th>TV-Y</th>
+      <td>306</td>
+      <td>3.48</td>
+    </tr>
+    <tr>
+      <th>PG</th>
+      <td>287</td>
+      <td>3.27</td>
+    </tr>
+    <tr>
+      <th>TV-G</th>
+      <td>220</td>
+      <td>2.50</td>
+    </tr>
+    <tr>
+      <th>NR</th>
+      <td>79</td>
+      <td>0.90</td>
+    </tr>
+    <tr>
+      <th>G</th>
+      <td>41</td>
+      <td>0.47</td>
+    </tr>
+    <tr>
+      <th>TV-Y7-FV</th>
+      <td>6</td>
+      <td>0.07</td>
+    </tr>
+    <tr>
+      <th>NC-17</th>
+      <td>3</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <th>UR</th>
+      <td>3</td>
+      <td>0.03</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">datos</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;rating&quot;</span><span class="p">,</span>
+    <span class="n">order</span><span class="o">=</span><span class="n">datos</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución de contenidos según clasificación&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Frecuencia&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Clasificación&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/f7510a442a3f998a8c8cad9bdfda9192eebd18e516650919f549ba2e63751f98.png" src="_images/f7510a442a3f998a8c8cad9bdfda9192eebd18e516650919f549ba2e63751f98.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="analisis-descriptivo-bivariado">
+<h2>Análisis Descriptivo Bivariado<a class="headerlink" href="#analisis-descriptivo-bivariado" title="Permalink to this heading">#</a></h2>
+<section id="categorica-vs-categorica">
+<h3>Categórica vs Categórica<a class="headerlink" href="#categorica-vs-categorica" title="Permalink to this heading">#</a></h3>
+<p>El mejor ejemplo para esta sección es la variable type vs rating. Para ello se hace la siguiente tabla de contingencia:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabla_contingencia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span>
+    <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">],</span>
+    <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">],</span>
+    <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">margins_name</span><span class="o">=</span><span class="s2">&quot;Total&quot;</span>
+<span class="p">)</span>
+
+<span class="n">tabla_contingencia</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>rating</th>
+      <th>G</th>
+      <th>NC-17</th>
+      <th>NR</th>
+      <th>PG</th>
+      <th>PG-13</th>
+      <th>R</th>
+      <th>TV-14</th>
+      <th>TV-G</th>
+      <th>TV-MA</th>
+      <th>TV-PG</th>
+      <th>TV-Y</th>
+      <th>TV-Y7</th>
+      <th>TV-Y7-FV</th>
+      <th>UR</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Movie</th>
+      <td>41</td>
+      <td>3</td>
+      <td>75</td>
+      <td>287</td>
+      <td>490</td>
+      <td>797</td>
+      <td>1427</td>
+      <td>126</td>
+      <td>2062</td>
+      <td>540</td>
+      <td>131</td>
+      <td>139</td>
+      <td>5</td>
+      <td>3</td>
+      <td>6126</td>
+    </tr>
+    <tr>
+      <th>TV Show</th>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>730</td>
+      <td>94</td>
+      <td>1143</td>
+      <td>321</td>
+      <td>175</td>
+      <td>194</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2664</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <td>41</td>
+      <td>3</td>
+      <td>79</td>
+      <td>287</td>
+      <td>490</td>
+      <td>799</td>
+      <td>2157</td>
+      <td>220</td>
+      <td>3205</td>
+      <td>861</td>
+      <td>306</td>
+      <td>333</td>
+      <td>6</td>
+      <td>3</td>
+      <td>8790</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabla_porcentajes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span>
+    <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">],</span>
+    <span class="n">datos</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">],</span>
+    <span class="n">normalize</span><span class="o">=</span><span class="s2">&quot;index&quot;</span>
+<span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">tabla_porcentajes</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>rating</th>
+      <th>G</th>
+      <th>NC-17</th>
+      <th>NR</th>
+      <th>PG</th>
+      <th>PG-13</th>
+      <th>R</th>
+      <th>TV-14</th>
+      <th>TV-G</th>
+      <th>TV-MA</th>
+      <th>TV-PG</th>
+      <th>TV-Y</th>
+      <th>TV-Y7</th>
+      <th>TV-Y7-FV</th>
+      <th>UR</th>
+    </tr>
+    <tr>
+      <th>type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Movie</th>
+      <td>0.67</td>
+      <td>0.05</td>
+      <td>1.22</td>
+      <td>4.68</td>
+      <td>8.0</td>
+      <td>13.01</td>
+      <td>23.29</td>
+      <td>2.06</td>
+      <td>33.66</td>
+      <td>8.81</td>
+      <td>2.14</td>
+      <td>2.27</td>
+      <td>0.08</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>TV Show</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.15</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>0.08</td>
+      <td>27.40</td>
+      <td>3.53</td>
+      <td>42.91</td>
+      <td>12.05</td>
+      <td>6.57</td>
+      <td>7.28</td>
+      <td>0.04</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>La tabla de contingencia muestra la distribución de las clasificaciones (rating) según el tipo de contenido. En las películas, predominan las clasificaciones TV-MA (33.66%) y TV-14 (23.29%), seguidas por R (13.01%). En las series, también predomina TV-MA (42.91%), seguida de TV-14 (27.40%) y TV-PG (12.05%). En general, se observa que las clasificaciones más frecuentes presentan una distribución diferente entre películas y series, aunque TV-MA es la categoría predominante en ambos tipos.</p>
+</section>
+<section id="categorica-vs-numerica">
+<h3>Categórica vs numérica<a class="headerlink" href="#categorica-vs-numerica" title="Permalink to this heading">#</a></h3>
+<p>Se analizará la variable type vs release_year</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datos</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)[</span><span class="s2">&quot;release_year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Movie</th>
+      <td>6126.0</td>
+      <td>2013.120144</td>
+      <td>9.681723</td>
+      <td>1942.0</td>
+      <td>2012.0</td>
+      <td>2016.0</td>
+      <td>2018.0</td>
+      <td>2021.0</td>
+    </tr>
+    <tr>
+      <th>TV Show</th>
+      <td>2664.0</td>
+      <td>2016.627628</td>
+      <td>5.735194</td>
+      <td>1925.0</td>
+      <td>2016.0</td>
+      <td>2018.0</td>
+      <td>2020.0</td>
+      <td>2021.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">datos</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;release_year&quot;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Año de lanzamiento según tipo de contenido&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tipo de contenido&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Año de lanzamiento&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/8c262a6bdedd6696d3b342f2ef1e6387bea80ab53b1b15450d5ba75840db2f47.png" src="_images/8c262a6bdedd6696d3b342f2ef1e6387bea80ab53b1b15450d5ba75840db2f47.png" />
+</div>
+</div>
+<p>Al comparar el año de lanzamiento según el tipo de contenido, se observa que las series presentan una mediana de 2018, superior a la mediana de 2016 de las películas. Además, el 50% central de las películas se encuentra entre 2012 y 2018, mientras que en las series se encuentra entre 2016 y 2020, lo que indica que las series del catálogo tienden a ser más recientes. Las películas presentan una mayor dispersión, con una desviación estándar de 9.68 años, frente a 5.74 años para las series. En ambos grupos se observan numerosos valores atípicos hacia años anteriores, especialmente en las películas, correspondientes a contenidos producidos varias décadas antes de los años predominantes del catálogo.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sección 1: Conceptos básicos de Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Algebra_Lineal.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Algebra Lineal esencial</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carga-de-datos">Carga de Datos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-faltantes">Valores Faltantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminacion-de-observaciones">1. Eliminación de observaciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminacion-de-variables">2. Eliminación de variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imputacion-de-valores">3. Imputación de valores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mantener-los-valores-faltantes">4. Mantener los valores faltantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-faltan-los-datos">¿Por qué faltan los datos?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-para-este-ejercicio">Decisión para este ejercicio</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-descriptivo-univariado">Análisis Descriptivo Univariado</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-tendencia-central-y-dispersion-variables-numericas">Medidas de tendencia central y dispersión (variables numéricas)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frecuencias-de-variables-categoricas-variables-categoricas">Frecuencias de variables categóricas (variables categóricas)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-descriptivo-bivariado">Análisis Descriptivo Bivariado</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#categorica-vs-categorica">Categórica vs Categórica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#categorica-vs-numerica">Categórica vs numérica</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sergio Rada
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
